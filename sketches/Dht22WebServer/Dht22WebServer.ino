@@ -7,6 +7,10 @@ read from a DHT22 sensor.
 Triple licensed unter GPL v3.0, LGPL v2.1, MIT - choose one
 that suits your needs!
 
+Uses DHTlib from Rob Tillaard:
+https://github.com/RobTillaart/Arduino 
+Tested revision: 1f2314cdbf18a09d847796862685fd5943708ea1
+
 */
 
 
