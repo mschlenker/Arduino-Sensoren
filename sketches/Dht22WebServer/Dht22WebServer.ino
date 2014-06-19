@@ -11,6 +11,10 @@ Uses DHTlib from Rob Tillaard:
 https://github.com/RobTillaart/Arduino 
 Tested revision: 1f2314cdbf18a09d847796862685fd5943708ea1
 
+Uses UIPEthernet from Norbert Truchsess:
+https://github.com/ntruchsess/arduino_uip
+Git Cloned on: 2014-04-03
+
 */
 
 
