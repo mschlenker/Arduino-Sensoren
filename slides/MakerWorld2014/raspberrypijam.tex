@@ -1,0 +1,240 @@
+%  
+% © Mattias Schlenker 
+% Dieser Text ist nicht frei, bitte wegen CC-Lizenzierung anfragen!
+% 
+
+
+\documentclass{beamer}
+%\usepackage[german]{babel}
+% \usepackage[iso-8859-1]{inputenc}
+\usepackage[latin9]{inputenc}
+\setbeamertemplate{navigation symbols}{}
+\usetheme{Warsaw}
+
+\beamersetuncovermixins{\opaqueness<1>{25}}{\opaqueness<2->{15}}
+\begin{document}
+\title{Mir genügt ein Arduino! Microcontroller statt Prozessor}  
+\author{Mattias Schlenker}
+\date{28. Juni 2014} 
+
+% Titelseite 
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+% TOC-Seite
+
+\begin{frame}
+\frametitle{Inhalt}
+\tableofcontents
+\end{frame} 
+
+
+\section{Arduino vs. RaspberryPi} 
+
+\begin{frame}
+\frametitle{Worin unterscheiden sich die beiden Bastlerplatinen?} 
+Auf den ersten Blick bietet der Raspberry Pi mehr als 1000 mal soviel Rechenleistung wie ein Arduino Uno für zehn Euro Aufpreis. Da fällt die Entscheidung leicht, oder?
+
+Sehen wir uns die Unterschiede doch einmal näher an:
+\end{frame}
+
+\subsection{Technische Daten}
+\begin{frame}
+\frametitle{Speicher und Rechenleistung} 
+\end{frame}
+
+\begin{frame}
+\frametitle{IO und Buses} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Interrupts} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Leistungsaufnahme} 
+\end{frame}
+
+\subsection{Einsatzbereiche}
+
+\begin{frame}
+\frametitle{Arduino} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Raspberry Pi} 
+\end{frame}
+
+\section{Die Arduino-Zukunft}
+
+\subsection{,,Starke'' Arduinos mit Linux}
+\subsection{Neue Microcontroller mit ARM-Kern}
+
+\section{Gemeinsam stark!}
+
+\subsection{Raspberry Pi mit Arduino huckepack}
+\subsection{Raspberry Pi als Zentrale}
+
+
+%\subsection{Subsection no.1.1  }
+
+\begin{frame} 
+Without title somethink is missing. 
+\end{frame}
+
+
+%\section{Section no. 2} 
+%\subsection{Lists I}
+\begin{frame}\frametitle{unnumbered lists}
+\begin{itemize}
+\item Introduction to  \LaTeX  
+\item Course 2 
+\item Termpapers and presentations with \LaTeX 
+\item Beamer class
+\end{itemize} 
+\end{frame}
+
+\begin{frame}\frametitle{lists with pause}
+\begin{itemize}
+\item Introduction to  \LaTeX \pause 
+\item Course 2 \pause 
+\item Termpapers and presentations with \LaTeX \pause 
+\item Beamer class
+\end{itemize} 
+\end{frame}
+
+\subsection{Lists II}
+\begin{frame}\frametitle{numbered lists}
+\begin{enumerate}
+\item Introduction to  \LaTeX  
+\item Course 2 
+\item Termpapers and presentations with \LaTeX 
+\item Beamer class
+\end{enumerate}
+\end{frame}
+
+\begin{frame}\frametitle{numbered lists with pause}
+\begin{enumerate}
+\item Introduction to  \LaTeX \pause 
+\item Course 2 \pause 
+\item Termpapers and presentations with \LaTeX \pause 
+\item Beamer class
+\end{enumerate}
+\end{frame}
+
+%\section{Section no.3} 
+%\subsection{Tables}
+\begin{frame}\frametitle{Tables}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Date} & \textbf{Instructor} & \textbf{Title} \\
+\hline
+WS 04/05 & Sascha Frank & First steps with  \LaTeX  \\
+\hline
+SS 05 & Sascha Frank & \LaTeX \ Course serial \\
+\hline
+\end{tabular}
+\end{frame}
+
+
+\begin{frame}\frametitle{Tables with pause}
+\begin{tabular}{c c c}
+A & B & C \\ 
+\pause 
+1 & 2 & 3 \\  
+\pause 
+A & B & C \\ 
+\end{tabular} 
+\end{frame}
+
+
+%\section{Section no. 4}
+%\subsection{blocs}
+\begin{frame}\frametitle{blocs}
+
+\begin{block}{title of the bloc}
+bloc text
+\end{block}
+
+\begin{exampleblock}{title of the bloc}
+bloc text
+\end{exampleblock}
+
+
+\begin{alertblock}{title of the bloc}
+bloc text
+\end{alertblock}
+\end{frame}
+
+%\section{Section no. 5}
+%\subsection{split screen}
+
+\begin{frame}\frametitle{splitting screen}
+\begin{columns}
+\begin{column}{5cm}
+\begin{itemize}
+\item Beamer 
+\item Beamer Class 
+\item Beamer Class Latex 
+\end{itemize}
+\end{column}
+\begin{column}{5cm}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Instructor} & \textbf{Title} \\
+\hline
+Sascha Frank &  \LaTeX \ Course 1 \\
+\hline
+Sascha Frank &  Course serial  \\
+\hline
+\end{tabular}
+\end{column}
+\end{columns}
+\end{frame}
+
+\subsection{Pictures} 
+\begin{frame}\frametitle{pictures in latex beamer class}
+\begin{figure}
+% \includegraphics[scale=0.5]{PIC1} 
+\caption{show an example picture}
+\end{figure}
+\end{frame}
+
+\subsection{joining picture and lists} 
+
+\begin{frame}
+\frametitle{pictures and lists in beamer class}
+\begin{columns}
+\begin{column}{5cm}
+\begin{itemize}
+\item<1-> subject 1
+\item<3-> subject 2
+\item<5-> subject 3
+\end{itemize}
+\vspace{3cm} 
+\end{column}
+\begin{column}{5cm}
+\begin{overprint}
+%\includegraphics<2>{PIC1}
+%\includegraphics<4>{PIC2}
+%\includegraphics<6>{PIC3}
+\end{overprint}
+\end{column}
+\end{columns}
+\end{frame}
+
+
+\subsection{pictures which need more space} 
+\begin{frame}[plain]
+\frametitle{plain, or a way to get more space}
+\begin{figure}
+% \includegraphics[scale=0.5]{PIC1} 
+\caption{show an example picture}
+\end{figure}
+\end{frame}
+
+
+
+\end{document}
