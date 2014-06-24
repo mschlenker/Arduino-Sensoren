@@ -1,0 +1,72 @@
+\section{Arduino vs. RaspberryPi} 
+
+\begin{frame}
+\frametitle{Worin unterscheiden sich die beiden Bastlerplatinen?} 
+Auf den ersten Blick bietet der Raspberry Pi mehr als 1000 mal soviel Rechenleistung wie ein Arduino Uno für zehn Euro Aufpreis. Da fällt die Entscheidung leicht, oder?
+
+Sehen wir uns die Unterschiede doch einmal näher an:
+\end{frame}
+
+\subsection{Technische Daten}
+\begin{frame}
+\frametitle{Speicher und Rechenleistung} 
+\begin{tabular}{c c c c}
+\textbf{Plattform} & \textbf{Arduino} & \textbf{Raspberry Pi} & \textbf{Faktor} \\ 
+\pause 
+RAM/Variablenspeicher & 2048 & 536870912 & 262144\\
+\pause 
+Festspeicher & 32768 & 8589934592 & 262144 \\
+\pause 
+,,Rechenleistung'' (MIPS) &  16 & ~ 1000 & 64 \\
+\end{tabular} 
+\end{frame}
+
+\begin{frame}
+\frametitle{IO und Buses}
+Arduino heisst in diesem Kontext Atmega328P, Raspberry Pi meint das Model B...
+\newline
+
+\begin{tabular}{c c c c}
+\textbf{Plattform} & \textbf{Arduino} & \textbf{Raspberry Pi} & \textbf{Faktor} \\ 
+\pause
+GPIO digital & 17 & 8 & unfair! Äpfel vs Birnen! \\
+\pause
+analog & 6 & 0 & 0 \\
+\pause
+SPI & 1 & 2 & 2 \\
+\pause
+UART (seriell) & 1 & 1 & 1 \\
+\pause
+I2C & 1 & 1 & 1 \\
+\end{tabular} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Interrupts} 
+Arduino heisst in diesem Kontext Atmega328P, Raspberry Pi meint das Model B...
+\newline
+
+\begin{tabular}{c c c c}
+\textbf{Plattform} & \textbf{Arduino} & \textbf{Raspberry Pi} & \textbf{Faktor} \\ 
+\pause
+Steigende Flanke & 2 & Publikum? & ? \\
+\pause
+Wakeup-Timer & 1 & Publikum? & ? \\
+\end{tabular} 
+
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Leistungsaufnahme} 
+\end{frame}
+
+\subsection{Einsatzbereiche}
+
+\begin{frame}
+\frametitle{Arduino} 
+\end{frame}
+
+\begin{frame}
+\frametitle{Raspberry Pi} 
+\end{frame}
