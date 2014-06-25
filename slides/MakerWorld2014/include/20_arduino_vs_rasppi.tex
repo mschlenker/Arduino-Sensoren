@@ -47,6 +47,7 @@ Arduino heisst in diesem Kontext Atmega328P, Raspberry Pi meint das Model B...
 \newline
 
 \begin{tabular}{c c c c}
+
 \textbf{Plattform} & \textbf{Arduino} & \textbf{Raspberry Pi} & \textbf{Faktor} \\ 
 \pause
 Steigend/Fallend & 2 & 8? Publikum? & ? \\
@@ -54,11 +55,29 @@ Steigend/Fallend & 2 & 8? Publikum? & ? \\
 Wakeup-Timer & 2 & beliebig viele & ? \\
 \end{tabular} 
 
-
 \end{frame}
 
 \begin{frame}
 \frametitle{Leistungsaufnahme} 
+
+Arduino heisst in diesem Kontext Atmega328P, Raspberry Pi meint das Model B...
+\newline
+
+\begin{tabular}{c c c c}
+
+\textbf{Plattform} & \textbf{Arduino} & \textbf{Raspberry Pi} & \textbf{Faktor} \\ 
+\pause
+\textbf{ohne Optimierungen} & 40mA bei 5V & 300mA bei 5V & 7,5 \\
+\pause
+\textbf{optimiert} & 4$\mu$A bei 3,0V & 60mA bei 3,6V & 15000 \\
+\pause
+\end{tabular}
+
+\begin{itemize}
+\item Optimierungen beim Arduino: BOD abschalten, ADC abschalten, Tiefschlaf, Batteriebetrieb mit 2xAAA, Takt auf 8MHz reduziert.
+\item Optimierungen beim Raspberry Pi: Abschalten nicht benötigter Schnittstellen, Auflöten eines optimierten Spannungswandlers, Akkubetrieb mit 3,6V.
+\end{itemize}
+
 \end{frame}
 
 \subsection{Einsatzbereiche}
