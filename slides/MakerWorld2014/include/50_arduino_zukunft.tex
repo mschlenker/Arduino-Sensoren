@@ -94,6 +94,103 @@ Eine neue Sammlung von Bibliotheken für die Arduino-IDE abstrahiert die Kommunik
   \end{center}
 \end{frame}
 
+\begin{frame}
+\frametitle{Arduino Yún - Tweets ganz praktisch}
+  \begin{center}
+    \includegraphics[width=9cm]{photos/tweet.png}
+  \end{center}
+
+Wozu? ,,Horst von Forst'', unser Weihnachtsbaum twitterte, wenn er zuwenig Wasser hatte. Der vollständige Code und Erklärungen zum verwendeten Sensor unter: http://www.arduino-hausautomation.de/
+\end{frame}
 
 \subsection{Neue Microcontroller mit ARM-Kern}
+
+\begin{frame}
+\frametitle{Arduino Due}
+Erstes Arduino-Board mit 32Bit-ARM-Microcontroller. Ca. 45 \euro. CAN-Interface. Blick in die Zukunft ohne weitere Relevanz. Daher keine technischen Details:
+
+  \begin{center}
+    \includegraphics[width=8cm]{photos/arduinodue.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Arduino Zero}
+Designierter Nachfolger des Arduino Uno mit SAMD21G18, höhere Integration verspricht günstigere Preise:
+
+  \begin{center}
+    \includegraphics[width=8cm]{photos/arduinozero.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Arduino Zero}
+Designierter Nachfolger des Arduino Uno mit SAMD21G1, höhere Integration verspricht günstigere Preise:
+\newline 
+
+\begin{itemize}
+\item 32 Bit Microcontroller mit ARM-Kern
+\item 256kB Flash 
+\item 32kB SRAM 
+\item Hohe Integration mit Debugger und 2xUSB
+\item Tendenziell Preise auf Level von Atmega32u4 oder Atmega328P - kleine Klone für weniger als 5 \euro\  möglich
+\item \textbf{Achtung!} 3,3 Volt
+\item \textbf{Achtung!} kein DIL Package des Controllers erhältlich
+\end{itemize}
+
+\end{frame}
+
+\subsection{Problem Fragmentierung}
+
+\begin{frame}
+\frametitle{Bitte unterbrechen!}
+
+\textbf{Falls Mattias in diesem Abschnitt ausschweift, bitte unterbrechen!}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Microcontroller-Familien von Arduino}
+
+Im Laufe der Jahre wurden von Arduino immer mehr Microcontroller-Familien unterstützt, nicht nur kleine Sprünge wie von Atmega168 auf Atmega328, sondern mehrere Brüche. Offizielle Familien:
+\newline
+
+\begin{itemize} 
+\item Atmega328: Arduino Uno, Pro Mini
+\item Atmega32u4: Leonardo, Yún, Micro
+\item Atmega2560: Mega2560
+\item \emph{neu} ATSAMD21: Arduino Zero, Due
+\item \emph{neu} Intel Galileo - noch nicht eingepflegt in Arduino IDE
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Kompatibilitätsprobleme}
+
+Daraus ergeben sich Kompatibilitätsprobleme, beispielsweise wenn Code von einem Microcontroller auf den anderen portiert werden soll:
+
+\begin{itemize} 
+\item Spannungsunterschiede: Mal 3,3V, mal 5V
+\item Unterschiedliche Position der Pins für SPI
+\item Code zum extremen Energiesparen ist Controllerspezifisch
+\item Viele Bibliotheken unterstützen bislang nur 328 und 32u4
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Hoffnung?}
+Kann der ARM-Kern die Fragmentierung stoppen?
+
+\begin{itemize} 
+\item Kurzfristige Ablösung der 32u4 basierten Controller durch ARM
+\item Fokus der Entwickler schnell auf ARM?
+\item Atmega328P wird noch eine Weile bleiben - weil im DIL-Package erhältlich
+\item Andere Controllerhersteller außer Atmega werden zu Arduino stoßen (Infineon?)
+\item Billige Klone im Mini-Format machen Verlust der DILs wett
+\item Arduino (im Sinne von Softwareplattform) wird offener und emanzipiert sich von Atmel
+\end{itemize}
+\end{frame}
+
+
 
