@@ -13,7 +13,7 @@ Raspberry Pi ist billig und leistungsstark, aber:
 \item Hoher Aufwand, Bibliotheken und Protokolle zu portieren
 \item Keine analogen Ports
 \end{itemize}
-
+\end{frame}
 
 \begin{frame}
 \frametitle{Die Lösung}
@@ -30,13 +30,72 @@ Wir kombinieren einfach Raspberry Pi und Arduino:
 \item GPIO des Raspberry bleibt erhalten
 \item Weniger als 10 Euro Investition
 \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \begin{center}
+    \includegraphics[width=10cm]{photos/IMG_20140623_144020.jpg}
+  \end{center}
+\end{frame}
 
 
+\begin{frame}
+\frametitle{Und wie geht das?}
+
+\begin{itemize}
+\item Nackter Atmega328P huckepack
+\item Spannungsversorgung durch 3,3V-Schiene des Raspberry
+\item Kommunikation über I2C-Bus - weitere Bus-Teilnehmer möglich
+\item \textbf{Bonus:} Atmega328P kann direkt vom Raspberry Pi programmiert werden
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Beispielcode Arduino}
+  \begin{center}
+    \includegraphics[width=6.3cm]{photos/i2carduino.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Beispielcode Raspberry}
+  \begin{center}
+    \includegraphics[width=6.3cm]{photos/i2craspberry.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Vor- und Nachteile}
+\textbf{Vorteile}
+\begin{itemize}
+\item Billig: Atmega328P gibt es in der Fuzo beim blauen C
+\item Schnell realisiert
+\item Sehr flexibel
+\end{itemize}
+
+\textbf{Nachteile}
+\begin{itemize}
+\item Zwei Sprachen involviert: Python und Arduino
+\item Kein fertiges Protokoll: Handarbeit angesagt
+\item Nur bei 3,3V-Betrieb bleiben alle Vorteile von I\textsuperscript{2}C erhalten
+\end{itemize}
 
 \end{frame}
 
 \subsection{Raspberry Pi als Zentrale}
 
 \begin{frame} 
-Without title somethink is missing. 
+\frametitle{Kommunikation über's Netz}
+Arduinos mit Enc28J60-Ethernetmodul kommunizieren mit dem Raspberry Pi:
+\newline
+
+\begin{itemize}
+\item UDP-Kommunikation bei Arduino simpel realisierbar
+\item UDP-Empfang auf Raspberry-Seite nur wenige Zeilen Python
+\item Billige Hardware am Arduino (3 bis 5 \euro \ für Enc28J60) 
+\item Weniger Einschränkungen bei Buslänge ggü. direktem Onewire
+\end{itemize}
+
+
 \end{frame}
