@@ -98,8 +98,18 @@ Arduino heisst in diesem Kontext Atmega328P, Raspberry Pi meint das Model B...
 \pause
 \item Atmega328P im DIL28-Gehäuse: 3 bis 5 \euro
 \end{itemize}
-
 \end{frame}
+
+\begin{frame}
+\frametitle{Preise visualisiert} 
+
+Der Raspberry links war teurer als die Arduino-Klone und nackten Atmega328P rechts!
+
+  \begin{center}
+    \includegraphics[width=10cm]{photos/IMG_20140626_101926.jpg}
+  \end{center}
+\end{frame}
+
 
 \subsection{Einsatzbereiche}
 
@@ -109,8 +119,62 @@ Arduino heisst in diesem Kontext Atmega328P, Raspberry Pi meint das Model B...
 \item \emph{Energiesparende} Sensoren oder Aktoren: Jahrelanger Betrieb auf zwei AAA-Zellen möglich
 \item \emph{Billige} Sensoren: Totalverlust ist zu verschmerzen
 \item \emph{Billige} Peripherie: Der integrierte ADC erlaubt den Anschluss von Thermistoren statt One-Wire-Temperatursensoren
-\item \emph{einfache} Sensoren und Aktoren: auch größere Stückzahlen (Sensornetze, Kunstprojekte) lassen sich mit wenigen Bauteilen schnell fertigen
+\item \emph{Einfache} Sensoren und Aktoren: auch größere Stückzahlen (Sensornetze, Kunstprojekte) lassen sich mit wenigen Bauteilen schnell fertigen
+\item \emph{Robuste} Softwareentwicklung: Weit weniger Abstraktionsschichten, bessere Vorhersehbarkeit
 \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Temperatursensor mit Webserver} 
+
+Der simpelste aller Webserver: Jedes auf Port 80 eingehende Paket - egal, was drinsteht -  wird einfach mit einer Webseite (Temperatur und Luftfeuchte) beantwortet. Weniger als 20k Binärcode gesamt!
+
+\begin{itemize}
+\item Arduino Pro Mini oder nackter Atmega328P
+\item Enc28J60 Ethernet (SPI-Anbindung)
+\item DHT11/22 Sensor
+\item Gesamtkosten: ca. 12  \euro
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Temperatursensor mit Webserver} 
+
+So sieht der verlötete Aufbau aus:
+
+  \begin{center}
+    \includegraphics[width=10cm]{photos/IMG_20140626_105909.jpg}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Code auf https://github.com/mschlenker} 
+ \begin{center}
+    \includegraphics[width=6cm]{photos/codedhtserver.png}
+  \end{center}
+\end{frame}
+
+\begin{frame}
+\frametitle{Loggender Sensor (Temperatur, Erdfeuchte, Licht)} 
+\begin{itemize}
+\item Arduino Pro Mini oder nackter Atmega328P
+\item $\mu$SD-Kartenadapter (geschenkt!)
+\item diverse Analogsensoren (NTC, resistive Erdfeuchte, Photo-Widerstand...)
+\item hier zusätzlich: RTC
+\item Gesamtkosten: 5 bis 10 Euro \euro
+\item ca. ein Jahr Laufzeit auf 3xAA bei Optimierung \euro
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Sensor mit SD-Logging} 
+
+So sieht der verlötete Aufbau aus:
+
+  \begin{center}
+    \includegraphics[width=10cm]{photos/IMG_20140626_111628.jpg}
+  \end{center}
 \end{frame}
 
 \begin{frame}
@@ -119,6 +183,9 @@ Arduino heisst in diesem Kontext Atmega328P, Raspberry Pi meint das Model B...
 \item \emph{Billige} Basis für Sensornetze
 \item \emph{Stromsparende} ,,Außenstelle'': Solarbetrieb mit relativ kleinem Panel möglich
 \item \emph{Große} Flexibilität dank ,,normalem'' Linux
+\item \emph{Kleine Server} für den Hausgebrauch
+\item \emph{Stark genug} um bspw. DVB-T oder Webcam zu streamen
+\item \emph{Lautloser} Thin Client für Windows- oder Linux-Server
 \end{itemize}
-
 \end{frame}
+
